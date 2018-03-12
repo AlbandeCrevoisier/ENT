@@ -1,0 +1,14 @@
+{
+  "name": "pagedraw",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "NODE_ENV=development electron .",
+    "build": "electron-packager . Pagedraw --icon=pagedraw-desktop-app-icon.icns --all --out=build --overwrite",
+    "build-mac": "electron-packager . Pagedraw --icon=pagedraw-desktop-app-icon.icns --platform=darwin --arch=all --out=build --overwrite"
+  },
+  "devDependencies": {
+    "electron-packager": "^11.0.0",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
