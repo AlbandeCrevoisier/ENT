@@ -8,7 +8,7 @@
 	  <b-form-input id='eMailIn' type='email' placeholder='e-mail' />
       <label class='sr-only' for='passIn'>Password</label>
 	  <b-form-input id='passIn' type='password' placeholder='mot de passe' />
-		<b-button variant='primary'>Se connecter</b-button>
+		<b-button variant='primary'>Login</b-button>
     </b-form>
   </div>
 </template>
