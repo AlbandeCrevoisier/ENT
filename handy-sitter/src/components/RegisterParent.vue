@@ -4,7 +4,7 @@
     <h2>Garde d'enfants handicapés</h2>
     <h3>S'enregistrer</h3>
     <h4>Parent</h4>
-    <b-button variant='primary' @click='addChild'>Enregistrer un enfant</b-button>
+    <b-button variant='primary' @click='registerChild'>Enregistrer un enfant</b-button>
   </div>
 </template>
 
@@ -16,8 +16,8 @@ export default {
     }
   },
   methods: {
-    addChild: function () {
-      // Add a child component
+    registerChild: function () {
+      this.$store.commit('addChild')
     }
   }
 }
