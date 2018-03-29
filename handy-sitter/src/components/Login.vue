@@ -5,9 +5,9 @@
     <h3>Se connecter</h3>
     <b-form inline>
       <label class='sr-only' for='eMailIn'>e-Mail</label>
-	  <b-form-input id='eMailIn' type='email' placeholder='e-mail' />
+	  <b-form-input id='eMailIn' type='email' placeholder='e-Mail' />
       <label class='sr-only' for='passIn'>Password</label>
-	  <b-form-input id='passIn' type='password' placeholder='mot de passe' />
+	  <b-form-input id='passIn' type='password' placeholder='Mot de passe' />
 		<b-button variant='primary'>Login</b-button>
     </b-form>
   </div>
