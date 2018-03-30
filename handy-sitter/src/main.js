@@ -16,11 +16,18 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state: {
-    children: []
+    parents: [],
+    sitters: []
   },
   mutations: {
-    addChild (state) {
-      state.children.push([''])
+    addParent (state, parent) {
+      state.parents.push([parent])
+    },
+    addChild (state, p) {
+      state.parents[p.parentId] = p.child
+    },
+    addSitter (state, sitter) {
+      state.sitters.push([sitter])
     }
   }
 })
