@@ -10,6 +10,7 @@
 <script>
 export default {
   name: 'register-sitter',
+  props: ['sitter'],
   data () {
     return {
     }
