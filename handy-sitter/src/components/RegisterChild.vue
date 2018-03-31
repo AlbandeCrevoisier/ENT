@@ -19,6 +19,7 @@ export default {
   props: ['childId'],
   data () {
     return {
+      infos: {name: this.name, surname: this.surname}
     }
   }
 }

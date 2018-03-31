@@ -11,14 +11,14 @@
 <script>
 export default {
   name: 'register-parent',
-  props: ['parentId'],
+  props: ['parentIdx'],
   data () {
     return {
     }
   },
   methods: {
     registerChild: function () {
-      this.$store.commit('addChild', {parentId: 'parent', child: 'child'})
+      this.$store.commit('addChild', {pIdx: this.parentIdx})
     }
   }
 }
