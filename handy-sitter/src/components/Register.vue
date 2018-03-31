@@ -35,8 +35,8 @@
         </b-col>
       </b-form-row>
     </b-container>
-    <b-button variant='primary' @click='registerParent' to='/register-parent/parent'>Parent</b-button>
-    <b-button variant='primary' @click='registerSitter' to='/register-sitter/sitter'>Sitter</b-button>
+    <b-button variant='primary' @click='registerParent'>Parent</b-button>
+    <b-button variant='primary' @click='registerSitter'>Sitter</b-button>
   </div>
 </template>
 
@@ -49,10 +49,12 @@ export default {
   },
   methods: {
     registerParent: function () {
-      this.$store.parents.push('parent')
+      this.$store.commit('addParent', 'parent')
+      this.$router.push('/register-parent/parent')
     },
     registerSitter: function () {
-      this.$store.sitters.push('sitter')
+      this.$store.commit('addSitter', 'sitter')
+      this.$router.push('/register-sitter/sitter')
     }
   }
 }
