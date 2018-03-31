@@ -26,13 +26,13 @@ export default new Router({
       component: Register
     },
     {
-      path: '/register-parent/:parentId',
+      path: '/register-parent/:parentIdx',
       name: 'register-parent',
       component: RegisterParent,
       props: true
     },
     {
-      path: '/register-sitter/:sitter',
+      path: '/register-sitter/:sitterIdx',
       name: 'register-sitter',
       component: RegisterSitter,
       props: true
