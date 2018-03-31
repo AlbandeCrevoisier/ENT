@@ -7,19 +7,19 @@
       <b-form-row>
         <b-col>
           <label class='sr-only' for='nameIn'>Name</label>
-          <b-form-input id='nameIn' placeholder='Prénom' />
+          <b-form-input v-model='infos.name' id='nameIn' placeholder='Prénom' />
         </b-col>
       </b-form-row>
       <b-form-row>
         <b-col>
           <label class='sr-only' for='surnameIn'>Surame</label>
-          <b-form-input id='surnameIn' placeholder='Nom' />
+          <b-form-input v-model='infos.surname' id='surnameIn' placeholder='Nom' />
         </b-col>
       </b-form-row>
       <b-form-row>
         <b-col>
           <label class='sr-only' for='eMailIn'>e-Mail</label>
-          <b-form-input id='eMailIn' type='email' placeholder='e-Mail' />
+          <b-form-input v-model='infos.email' id='eMailIn' type='email' placeholder='e-Mail' />
         </b-col>
       </b-form-row>
       <b-form-row>
@@ -45,15 +45,20 @@ export default {
   name: 'register',
   data () {
     return {
+      infos: {
+        name: '',
+        surname: '',
+        email: ''
+      }
     }
   },
   methods: {
     registerParent: function () {
-      this.$store.commit('addParent', 'parent')
+      this.$store.commit('addParent', {...this.infos, children: []})
       this.$router.push('/register-parent/parent')
     },
     registerSitter: function () {
-      this.$store.commit('addSitter', 'sitter')
+      this.$store.commit('addSitter', {...this.infos})
       this.$router.push('/register-sitter/sitter')
     }
   }
