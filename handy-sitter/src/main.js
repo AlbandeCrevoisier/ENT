@@ -20,14 +20,22 @@ const store = new Vuex.Store({
     sitters: []
   },
   mutations: {
-    addParent (state, parent) {
-      state.parents.push([parent])
+    addParent (state, p) {
+      state.parents.push(p)
     },
-    addChild (state, p) {
-      state.parents[p.parentId] = p.child
+    addChild (state, c) {
+      state.parents[c.pIdx].children.push({})
     },
-    addSitter (state, sitter) {
-      state.sitters.push([sitter])
+    addSitter (state, s) {
+      state.sitters.push(s)
+    }
+  },
+  getters: {
+    pIdx (state) {
+      return state.parents.length - 1
+    },
+    sIdx (state) {
+      return state.sitters.length - 1
     }
   }
 })
