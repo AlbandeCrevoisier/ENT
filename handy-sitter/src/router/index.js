@@ -12,28 +12,28 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing',
+      name: 'Landing',
       component: Landing
     },
     {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: Login
     },
     {
       path: '/register',
-      name: 'register',
+      name: 'Register',
       component: Register
     },
     {
       path: '/register-parent/:parentIdx',
-      name: 'register-parent',
+      name: 'RegisterParent',
       component: RegisterParent,
       props: true
     },
     {
       path: '/register-sitter/:sitterIdx',
-      name: 'register-sitter',
+      name: 'RegisterSitter',
       component: RegisterSitter,
       props: true
     }
