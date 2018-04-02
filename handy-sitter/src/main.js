@@ -24,7 +24,10 @@ const store = new Vuex.Store({
       state.parents.push(p)
     },
     addChild (state, c) {
-      state.parents[c.pIdx].children.push({})
+      state.parents[c.pIdx].children.push(c.child)
+    },
+    popChild (state, pIdx) {
+      state.parents[pIdx].children.pop()
     },
     addSitter (state, s) {
       state.sitters.push(s)

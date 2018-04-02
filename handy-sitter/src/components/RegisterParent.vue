@@ -4,10 +4,14 @@
     <h2>Garde d'enfants handicapés</h2>
     <h3>S'enregistrer</h3>
     <h4>Parent</h4>
-    <RegisterParentChild v-for='child in children.children' :key='child.name' :parentIdx='parentIdx'/>
+    <label class='sr-only' for='nChildrenIn'>Number of Children</label>
+    <RegisterParentChild
+      v-for='child in children'
+      :key='children.indexOf(child)'
+      :parentIdx='parentIdx' />
     <b-button variant='primary' @click='addChild'>Ajouter un enfant</b-button>
     <b-button variant='primary' @click='delChild'>Supprimer un enfant</b-button>
-    <b-button variant='primary' @click='registerChildren'>Enregistrer</b-button>
+    <b-button variant='primary' to='/Landing'>Valider</b-button>
   </div>
 </template>
 
@@ -16,21 +20,19 @@ import RegisterParentChild from './RegisterParentChild'
 export default {
   name: 'RegisterParent',
   props: ['parentIdx'],
-  data () {
-    return {
-      children: {pIdx: this.parentIdx, children: []}
-    }
-  },
+  data () { return {} },
   components: {RegisterParentChild},
   methods: {
     addChild: function () {
-      this.children.children.push({})
+      this.$store.commit('addChild', {pIdx: this.parentIdx, child: {name: ''}})
     },
     delChild: function () {
-      this.children.children.pop()
-    },
-    registerChildren: function () {
-      this.$store.commit('addChild', {...this.children})
+      this.$store.commit('popChild', this.parentIdx)
+    }
+  },
+  computed: {
+    children: function () {
+      return this.$store.state.parents[this.parentIdx].children
     }
   }
 }

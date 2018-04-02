@@ -3,11 +3,11 @@
     <b-form-row>
       <b-col>
         <label class='sr-only' for='nameIn'>Name</label>
-        <b-form-input v-model='infos.name' id='nameIn' placeholder='Prénom' />
+        <b-form-input id='nameIn' placeholder='Prénom' />
       </b-col>
       <b-col>
         <label class='sr-only' for='surnameIn'>Surame</label>
-        <b-form-input v-model='infos.surname' id='surnameIn' placeholder='Nom' />
+        <b-form-input id='surnameIn' placeholder='Nom' />
       </b-col>
     </b-form-row>
   </b-container>
@@ -17,10 +17,6 @@
 export default {
   name: 'RegisterParentChild',
   props: ['parentIdx'],
-  data () {
-    return {
-      infos: {pIdx: this.parentId, name: this.name, surname: this.surname}
-    }
-  }
+  data () { return {} }
 }
 </script>
