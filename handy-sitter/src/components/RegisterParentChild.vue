@@ -14,9 +14,17 @@
 </template>
 
 <script>
+import mapState from 'vuex'
 export default {
   name: 'RegisterParentChild',
-  props: ['parentIdx'],
-  data () { return {} }
+  props: ['parentIdx', 'childIdx'],
+  data () {
+    return {}
+  },
+  computed: {
+    mapState({
+      name: state => state.parents[parentIdx].children[childIdx].name
+    })
+  }
 }
 </script>
