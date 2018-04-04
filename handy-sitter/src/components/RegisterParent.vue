@@ -25,15 +25,16 @@ export default {
   },
   components: {RegisterParentChild},
   methods: {
-    addChild: function () {
-      this.$store.commit('addChild', {pIdx: this.parentIdx, child: {name: ''}})
+    addChild () {
+      var c = {name: '', surname: ''}
+      this.$store.commit('addChild', {pIdx: this.parentIdx, child: c})
     },
-    delChild: function () {
+    delChild () {
       this.$store.commit('popChild', this.parentIdx)
     }
   },
   computed: {
-    children: function () {
+    children () {
       return this.$store.state.parents[this.parentIdx].children
     }
   }
