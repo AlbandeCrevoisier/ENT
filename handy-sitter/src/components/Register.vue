@@ -53,11 +53,11 @@ export default {
     }
   },
   methods: {
-    registerParent: function () {
+    registerParent () {
       this.$store.commit('addParent', {...this.infos, children: []})
       this.$router.push('/register-parent/' + this.$store.getters.pIdx)
     },
-    registerSitter: function () {
+    registerSitter () {
       this.$store.commit('addSitter', {...this.infos})
       this.$router.push('/register-sitter/' + this.$store.getters.sIdx)
     }
