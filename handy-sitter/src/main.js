@@ -26,6 +26,12 @@ const store = new Vuex.Store({
     addChild (state, c) {
       state.parents[c.pIdx].children.push(c.child)
     },
+    setChildName (state, cn) {
+      state.parents[cn.pIdx].children[cn.cIdx] = cn.name
+    },
+    setChildSurname (state, cs) {
+      state.parents[cs.pIdx].children[cs.cIdx] = cs.surname
+    },
     popChild (state, pIdx) {
       state.parents[pIdx].children.pop()
     },
