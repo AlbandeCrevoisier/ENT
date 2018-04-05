@@ -9,7 +9,7 @@
 export default {
   name: 'app',
   methods: {
-    goLanding: function () {
+    goLanding () {
       this.$router.push('/')
     }
   }
