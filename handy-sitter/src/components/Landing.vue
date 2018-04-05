@@ -1,9 +1,5 @@
 <template>
   <div>
-    <h1>Bienvenue sur Handy-Sitter</h1>
-    <h2>Garde d'enfants handicapés</h2>
-    <b-button variant='primary' to='/login'>Se connecter</b-button>
-    <b-button variant='primary' to='/register'>S'enregistrer</b-button>
     <p>
       Handy-Sitter est une plateforme de baby-sitting pour enfants handicapés.
       Notre but est de mettre en relation des baby-sitters sensibilisés au
@@ -12,6 +8,8 @@
       enfant ayant des besoins particuliers du fait d'un handicap. Nous pouvons
       réaliser cela en recrutant des baby-sitters parmi les étudiants de santé.
     </p>
+    <b-button variant='primary' to='/login'>Se connecter</b-button>
+    <b-button variant='primary' to='/register'>S'enregistrer</b-button>
   </div>
 </template>
 
@@ -24,3 +22,4 @@ export default {
   }
 }
 </script>
+

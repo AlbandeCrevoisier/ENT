@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1>Bienvenue sur Handy-Sitter</h1>
-    <h2>Garde d'enfants handicapés</h2>
     <h3>S'enregistrer</h3>
     <b-container>
       <b-form-row>
