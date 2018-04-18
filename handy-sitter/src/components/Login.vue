@@ -14,7 +14,7 @@
                     placeholder='Mot de passe'
                     v-model='pass'
                     required />
-      <b-button variant='submit' >Login</b-button>
+      <b-button type='submit' variant='primary' >Login</b-button>
     </b-form>
   </div>
 </template>
