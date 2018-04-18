@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     sub () {
-      if (this.pos === 'p') {
+      if (this.infos.pos === 'p') {
         this.$store.commit('addParent', {...this.infos, children: []})
         this.$router.push('/register-parent/' + this.$store.getters.pIdx)
       } else {
